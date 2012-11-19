@@ -4,7 +4,7 @@
 
 mark-forward-sexp behaves in a similar fashion to vim's 'co' and 'ci'
 keystrokes, by jumping forward(/backward) to the content of matching
-delimiters and marking for change that content. For example:
+delimiters and marking that content. For example:
 
 ```lisp
 C-c i "
@@ -20,7 +20,7 @@ Add the following to your emacs config:
 
 ```lisp
 (add-to-list 'load-path "~/path/to/mark-forward-sexp")
-  (require 'mark-forward-sexp)
+(require 'mark-forward-sexp)
 ```
 
 and some keybindings, e.g.:
