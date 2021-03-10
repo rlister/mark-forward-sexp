@@ -75,6 +75,7 @@ Negative ARG moves backwards."
       (forward-sexp incr)
       (skip-forward-sexp char (- n incr)))))
 
+;;;###autoload
 (defun mark-forward-sexp (char &optional arg)
   "Skip forward to beginning of ARGth balanced expression starting with CHAR
 and mark active the expression. Negative ARG moves backward."
@@ -86,6 +87,7 @@ and mark active the expression. Negative ARG moves backward."
        (forward-sexp)
        (point)) nil t)))
 
+;;;###autoload
 (defun mark-backward-sexp (char &optional arg)
   "Skip backward to beginning of ARGth balanced expression starting with CHAR
 and mark active the expression."
@@ -93,6 +95,7 @@ and mark active the expression."
   (let ((n (or arg 1)))
     (mark-forward-sexp char (- n))))
 
+;;;###autoload
 (defun mark-inside-forward-sexp (char &optional arg)
   "Skip forward to beginning of ARGth balanced expression starting with CHAR
 and mark active inside the expression."
@@ -100,6 +103,7 @@ and mark active inside the expression."
   (mark-forward-sexp char arg)
   (shrink-region))
 
+;;;###autoload
 (defun mark-inside-backward-sexp (char &optional arg)
   "Skip backward to beginning of ARGth balanced expression starting with CHAR
 and mark active inside the expression."
