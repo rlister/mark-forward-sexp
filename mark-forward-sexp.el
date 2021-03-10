@@ -1,6 +1,11 @@
-;; mark-forward-sexp.el - mark regions sematically inside balanced expressions.
-;; 
+;;; mark-forward-sexp.el --- Mark regions sematically inside balanced expressions.
+;;
 ;; Copyright (C) 2012 by Ric Lister
+;;
+;; Author: Ric Lister
+;; Version: 20210310.3
+;; Package-Requires: ((emacs "24.1"))
+;; URL: https://github.com/rlister/mark-forward-sexp
 ;;
 ;; This file is not part of GNU Emacs.
 ;;
@@ -19,7 +24,7 @@
 ;; Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
 ;; 02111-1307, USA.
 ;;
-;; Description:
+;;; Commentary:
 ;;
 ;; mark-forward-sexp behaves in a similar fashion to vim's 'co' and 'ci'
 ;; keystrokes, by jumping forward(/backward) to the contents of matching
@@ -103,3 +108,4 @@ and mark active inside the expression."
     (mark-inside-forward-sexp char (- n))))
 
 (provide 'mark-forward-sexp)
+;;; mark-forward-sexp.el ends here
